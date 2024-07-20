@@ -1,0 +1,2 @@
+# GPKadryPlace
+kadryi grafiki pracownicze
