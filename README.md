@@ -1,2 +1,5 @@
 # GPKadryPlace
-kadryi grafiki pracownicze
+kadry i grafiki pracownicze
+
+
+
