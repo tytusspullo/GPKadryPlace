@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[employee_schedule_type]
 [ID_employee_schedule_type] INT NOT NULL IDENTITY(1,1)
 ,[name] VARCHAR(30) NOT NULL
 ,[avilable] BIT NOT NULL DEFAULT 1
-,CONSTRAINT PK_employee_schedule_type PRIMARY KEY ([ID_employee_schedule_type]),
+,CONSTRAINT PK_employee_schedule_type PRIMARY KEY ([ID_employee_schedule_type])
 );
 
 INSERT INTO [dbo].[employee_schedule_type] ([name]) VALUES ('Planowany');
