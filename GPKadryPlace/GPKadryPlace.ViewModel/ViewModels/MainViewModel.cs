@@ -14,7 +14,9 @@ namespace GPKadryPlace.ViewModel.ViewModels
         private BaseViewModel _selectedViewModel;
         public BaseViewModel SelectedViewModel
         {
-            get { return _selectedViewModel; }
+            get { 
+                return _selectedViewModel; 
+            }
             set
             {
                 _selectedViewModel = value;

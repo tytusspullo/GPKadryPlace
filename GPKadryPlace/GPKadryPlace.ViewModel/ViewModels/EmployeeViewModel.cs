@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GPKadryPlace.ViewModel.ViewModels
 {
-    internal class EmployeeViewModel: BaseViewModel
+    public class EmployeeViewModel: BaseViewModel
     {
     }
 }
