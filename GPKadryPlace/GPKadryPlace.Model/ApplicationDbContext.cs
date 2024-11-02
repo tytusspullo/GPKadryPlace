@@ -15,7 +15,7 @@ namespace GPKadryPlace.Model
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Employee>().ToTable("employee", "dbo");
+            //modelBuilder.Entity<Employee>().ToTable("employee", "dbo");
         }
     }
 }
