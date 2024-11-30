@@ -11,14 +11,14 @@ BEGIN TRY
 
 CREATE TABLE [dbo].[employee_schedule_type]
 (
-[ID_employee_schedule_type] INT NOT NULL IDENTITY(1,1)
+[ID_employee_schedule_type] INT NOT NULL
 ,[name] VARCHAR(30) NOT NULL
 ,[avilable] BIT NOT NULL DEFAULT 1
 ,CONSTRAINT PK_employee_schedule_type PRIMARY KEY ([ID_employee_schedule_type])
 );
 
-INSERT INTO [dbo].[employee_schedule_type] ([name]) VALUES ('Planowany');
-INSERT INTO [dbo].[employee_schedule_type] ([name]) VALUES ('Wykonania');
+INSERT INTO [dbo].[employee_schedule_type] ([ID_employee_schedule_type],[name]) VALUES (1,'Planowany');
+INSERT INTO [dbo].[employee_schedule_type] ([ID_employee_schedule_type],[name]) VALUES (2,'Wykonania');
 
 CREATE TABLE [dbo].[employee_absenteeism]
 (

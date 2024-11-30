@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GPKadryPlace.Model.Classes
+namespace GPKadryPlace.Model
 {
     public class EmployeeSchedulePosition
     {

@@ -7,16 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MaxWidth="1600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Background="IndianRed" Width="800">
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="IndianRed">
             <Button Margin="10" Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
             <Button Margin="10" Width="200" Content="Employees" Command="{Binding UpdateViewCommand}" CommandParameter="Employee" />
         </StackPanel>
-        <ContentControl Grid.Row="1" Content="{Binding SelectedViewModel}"/>
+        <ContentControl Grid.Column="1" Grid.Row="2" Content="{Binding SelectedViewModel}"/>
 
 
     </Grid>
