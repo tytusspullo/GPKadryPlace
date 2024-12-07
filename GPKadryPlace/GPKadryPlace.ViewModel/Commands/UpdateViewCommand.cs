@@ -34,6 +34,10 @@ namespace GPKadryPlace.ViewModel.Commands
             {
                 viewModel.SelectedViewModel = new EmployeeViewModel();
             }
+            else if (parameter.ToString() == "EmployeeAbsenteeism")
+            { 
+                viewModel.SelectedViewModel = new EmployeeAbsenteeismViewModel();
+            }
         }
     }
 }

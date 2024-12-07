@@ -17,5 +17,10 @@ namespace GPKadryPlace.Model
 
         // Collection of related schedule positions
         public List<EmployeeSchedulePosition> EmployeeSchedulePositions { get; set; } = new List<EmployeeSchedulePosition>();
+
+        public void Save()
+        { 
+            
+        }
     }
 }

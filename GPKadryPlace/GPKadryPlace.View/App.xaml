@@ -6,6 +6,7 @@
              xmlns:viewmodels="clr-namespace:GPKadryPlace.ViewModel.ViewModels;assembly=GPKadryPlace.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
         <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}" >
             <views:HomeView/>
         </DataTemplate>
@@ -13,6 +14,10 @@
         <DataTemplate DataType="{x:Type viewmodels:EmployeeViewModel}" >
             <views:EmployeeView/>
         </DataTemplate>
-        
+
+        <DataTemplate DataType="{x:Type viewmodels:EmployeeAbsenteeismViewModel}" >
+            <views:EmployeeAbsenteeismView/>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>

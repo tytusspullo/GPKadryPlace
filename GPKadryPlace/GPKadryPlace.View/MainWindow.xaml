@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GPKadryPlace.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MaxWidth="1600">
+        Title="GP Kadry Płace" Height="480" MinHeight="480" MaxHeight="1280"
+        Width="800" MinWidth="800" MaxWidth="1600" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"></ColumnDefinition>
@@ -17,14 +18,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="IndianRed">
             <Button Margin="10" Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
             <Button Margin="10" Width="200" Content="Employees" Command="{Binding UpdateViewCommand}" CommandParameter="Employee" />
+            <Button Margin="10" Width="200" Content="EmployeeAbsenteeism" Command="{Binding UpdateViewCommand}" CommandParameter="EmployeeAbsenteeism" />
         </StackPanel>
         <ContentControl Grid.Column="1" Grid.Row="2" Content="{Binding SelectedViewModel}"/>
-
-
     </Grid>
 </Window>
