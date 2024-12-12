@@ -22,9 +22,14 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="IndianRed">
-            <Button Margin="10" Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
-            <Button Margin="10" Width="200" Content="Employees" Command="{Binding UpdateViewCommand}" CommandParameter="Employee" />
-            <Button Margin="10" Width="200" Content="EmployeeAbsenteeism" Command="{Binding UpdateViewCommand}" CommandParameter="EmployeeAbsenteeism" />
+            <Button Margin="10" Width="140"  Command="{Binding UpdateViewCommand}" CommandParameter="Home">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="home.png" Width="12" Height="12"/>
+                    <TextBlock Margin="10,0,0,0" Text="Home" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Margin="10" Width="140" Content="Employees" Command="{Binding UpdateViewCommand}" CommandParameter="Employee" />
+            <Button Margin="10" Width="140" Content="Employee Absenteeism" Command="{Binding UpdateViewCommand}" CommandParameter="EmployeeAbsenteeism" />
         </StackPanel>
         <ContentControl Grid.Column="1" Grid.Row="2" Content="{Binding SelectedViewModel}"/>
     </Grid>
