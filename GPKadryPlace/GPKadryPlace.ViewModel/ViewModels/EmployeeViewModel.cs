@@ -8,5 +8,10 @@ namespace GPKadryPlace.ViewModel.ViewModels
 {
     public class EmployeeViewModel: BaseViewModel
     {
+        private string connectionString = string.Empty;
+        public EmployeeViewModel(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
     }
 }

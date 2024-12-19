@@ -12,6 +12,17 @@ namespace GPKadryPlace.ViewModel.ViewModels
     public class MainViewModel : BaseViewModel
     {
         private BaseViewModel _selectedViewModel;
+        private string connectionString = string.Empty;
+
+        public MainViewModel(string connectionString) 
+        { 
+            this.connectionString = connectionString;
+            UpdateViewCommand = new UpdateViewCommand(this, this.connectionString);
+        }
+        public MainViewModel()
+        {
+            UpdateViewCommand = new UpdateViewCommand(this, this.connectionString);
+        }
         public BaseViewModel SelectedViewModel
         {
             get { 
@@ -26,9 +37,6 @@ namespace GPKadryPlace.ViewModel.ViewModels
 
         public ICommand UpdateViewCommand { get; set; }
 
-        public MainViewModel()
-        {
-            UpdateViewCommand = new UpdateViewCommand(this);
-        }
+
     }
 }

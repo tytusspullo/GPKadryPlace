@@ -20,7 +20,10 @@ namespace GPKadryPlace.View
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();   
+            var configurationReader = new ConfigurationReader();
+            var connStr = configurationReader.ReturnConnection();
+            DataContext = new MainViewModel(connStr);
+
         }
 
     }

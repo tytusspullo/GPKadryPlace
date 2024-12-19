@@ -11,10 +11,12 @@ namespace GPKadryPlace.ViewModel.Commands
     public class UpdateViewCommand : ICommand
     {
         private MainViewModel viewModel;
+        private string connectionString = string.Empty;
 
-        public UpdateViewCommand(MainViewModel viewModel)
+        public UpdateViewCommand(MainViewModel viewModel,string connectionString)
         {
             this.viewModel = viewModel;
+            this.connectionString = connectionString;
         }
 
         public event EventHandler CanExecuteChanged;
@@ -28,15 +30,15 @@ namespace GPKadryPlace.ViewModel.Commands
         {
             if (parameter.ToString() == "Home")
             {
-                viewModel.SelectedViewModel = new HomeViewModel();
+                viewModel.SelectedViewModel = new HomeViewModel(this.connectionString);
             }
             else if (parameter.ToString() == "Employee")
             {
-                viewModel.SelectedViewModel = new EmployeeViewModel();
+                viewModel.SelectedViewModel = new EmployeeViewModel(this.connectionString);
             }
             else if (parameter.ToString() == "EmployeeAbsenteeism")
             { 
-                viewModel.SelectedViewModel = new EmployeeAbsenteeismViewModel();
+                viewModel.SelectedViewModel = new EmployeeAbsenteeismViewModel(this.connectionString);
             }
         }
     }

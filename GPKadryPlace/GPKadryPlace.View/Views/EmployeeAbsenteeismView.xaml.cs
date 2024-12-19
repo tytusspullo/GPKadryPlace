@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GPKadryPlace.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,9 @@ namespace GPKadryPlace.View.Views
         public EmployeeAbsenteeismView()
         {
             InitializeComponent();
+        /*
+         * https://www.youtube.com/watch?v=nnxCO4JX1Wc
+         */
         }
     }
 }

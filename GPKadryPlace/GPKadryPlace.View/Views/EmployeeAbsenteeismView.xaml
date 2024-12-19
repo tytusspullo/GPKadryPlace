@@ -19,8 +19,11 @@
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1" FontSize="36" HorizontalAlignment="Center" Content="Employee Absenteeisms"  />
-        <DataGrid Grid.Column="1" Grid.Row="2" Background="LightGray">
-            
+        <DataGrid Name="dgEmployeeAbsenteeisms"  Grid.Column="1" Grid.Row="2" Background="LightGray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Short Symbol" Width="80"></DataGridTextColumn>
+                <DataGridTextColumn Header="Decryption"  Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>
